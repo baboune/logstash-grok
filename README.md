@@ -14,7 +14,11 @@ $ cd /opt/logstash/bin
 $ ./logstash agent -f /vagrant/config --verbose
 
 To re-run the same logs, clean up the .sincedb* that stores last offsets in files monitored by logstash.
+'''
 $ rm -rf /vagrant/.sincedb*
+'''
+
+Note: It is also possible to use http://grokconstructor.appspot.com/ for testing and incremental construction of regular expressions for the grok filter that parses logfile lines for Logstash.
 
 ## Parsing syslog
 The default syslog pattern is %{SYSLOGTIMESTAMP:syslog_timestamp}.
@@ -29,11 +33,12 @@ But syslog can also send more advanced time like when using:
 * RSYSLOG_SysklogdFileFormat 
 
 This can be changed in Ubuntu at /etc/rsyslog.conf.
-
+'''
 #$ActionFileDefaultTemplate RSYSLOG_TraditionalFileFormat
 $ActionFileDefaultTemplate RSYSLOG_ForwardFormat
+'''
 
-In order to handle this, a better pattern needed to be made to handle either formats.
+In order to handle these more complete timestamps, a better pattern is needed. Ideally one that can handle either formats.
 
 # Ceilometer
 
