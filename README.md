@@ -1,4 +1,4 @@
-# logstash-grok
+# logstash-grok practice
 Practice parsing logs using Logstash and Grok
 
 To run:
