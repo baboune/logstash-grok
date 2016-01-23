@@ -1,0 +1,4 @@
+<8>2013-04-06T13:26:48.622862+01:00 node-1 rsyslogd-2027: Using prio, T and long time
+Mar 12 12:27:00 node-2 named[32172]: no prio, short standard syslog
+2016-01-21T14:02:11.472593+00:00 node-3 rsyslogd: no prio, T and long time
+<123>Jan 11 13:17:01 node-4 CRON[13599]: prio, short standard syslog

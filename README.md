@@ -1,6 +1,21 @@
 # logstash-grok
 Practice parsing logs using Logstash and Grok
 
+To run:
+$ vagrant up
+
+What it does:
+- Launches an ubuntu 14.04 (trusty) server
+- Installs java and logstash 1.5.6
+
+To run logstash, and test the config vs the logs:
+$ vagrant ssh
+$ cd /opt/logstash/bin
+$ ./logstash agent -f /vagrant/config --verbose
+
+To re-run the same logs, clean up the .sincedb* that stores last offsets in files monitored by logstash.
+$ rm -rf /vagrant/.sincedb*
+
 ## Parsing syslog
 The default syslog pattern is %{SYSLOGTIMESTAMP:syslog_timestamp}.
 
@@ -24,6 +39,11 @@ In order to handle this, a better pattern needed to be made to handle either for
 
 Ceilometer counters have different timpestamps based on the counter names.
 
+This requires 3 possible (at least) possible matches on the timestamp field from the JSON event:
+
+  date {
+    match => [ "ceilometer_timestamp", "YYYY-MM-dd'T'HH:mm:ssZ", "YYYY-MM-dd HH:mm:ss.SSSSSSZ",  "YYYY-MM-dd'T'HH:mm:ss.SSSSSSZ", "YYYY-MM-dd HH:mm:ss.SSSSSS"]
+  }
 
 # Useful grok tips
 

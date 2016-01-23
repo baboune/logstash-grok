@@ -1,0 +1,20 @@
+2016-01-21 07:35:07.653 9730 INFO nova.osapi_compute.wsgi.server [req-47485240-66e0-48b4-b3ea-939e7941ce11 None] 192.168.40.2 "GET /v2/71b4bb8b4e004c94ba41de53fd54b0a5/images/c3a979bc-2ece-4af9-8c91-396120e2641c HTTP/1.1" status: 200 len: 973 time: 0.1443841
+2016-01-21 07:35:07.671 9731 INFO nova.osapi_compute.wsgi.server [req-6af603a1-c9e7-4163-82b1-5327c2256f47 None] 192.168.40.2 "GET /v2/71b4bb8b4e004c94ba41de53fd54b0a5/flavors/2fc31471-d888-4a43-8eb1-c191f69d1ec3 HTTP/1.1" status: 200 len: 727 time: 0.0143490
+2016-01-21 07:35:07.697 9755 INFO nova.api.ec2 [-] 0.1307s 192.168.40.2 GET /latest/user-data/ None:None 200 [Python-httplib2/0.8 (gzip)] text/plain text/plain
+2016-01-21 07:35:07.698 9755 INFO nova.metadata.wsgi.server [-] 20.20.20.80,192.168.40.2 "GET /latest/user-data/ HTTP/1.1" status: 200 len: 2762 time: 0.0024331
+2016-01-21 07:35:07.705 9755 INFO nova.api.ec2 [-] 0.1211s 192.168.40.2 GET /latest/user-data/ None:None 200 [Python-httplib2/0.8 (gzip)] text/plain text/plain
+2016-01-21 07:35:07.706 9755 INFO nova.metadata.wsgi.server [-] 20.20.20.80,192.168.40.2 "GET /latest/user-data/ HTTP/1.1" status: 200 len: 2762 time: 0.0018799
+2016-01-21 07:35:07.709 9733 INFO nova.osapi_compute.wsgi.server [req-590c9c95-f99f-4c1e-baab-f1363d3b59ec None] 192.168.40.2 "GET /v2/71b4bb8b4e004c94ba41de53fd54b0a5/servers/detail?all_tenants=True&host=node-22.domain.tld HTTP/1.1" status: 200 len: 2102 time: 0.1540811
+2016-01-21 07:35:07.729 9730 INFO nova.osapi_compute.wsgi.server [req-856e83de-ddc5-41f0-a355-f5994420f49d None] 192.168.40.2 "GET /v2/71b4bb8b4e004c94ba41de53fd54b0a5/flavors/8b161ba4-244f-46f6-80be-9f8e8a4a825f HTTP/1.1" status: 200 len: 731 time: 0.0160420
+2016-01-21 07:35:07.753 9733 INFO nova.osapi_compute.wsgi.server [req-4f4ebb2a-0cd1-4523-b2fd-1b5d630935e9 None] 192.168.40.2 "GET /v2/71b4bb8b4e004c94ba41de53fd54b0a5/images/960ed740-139f-46ed-9854-c3053c24280e HTTP/1.1" status: 200 len: 959 time: 0.0762479
+2016-01-21 07:35:07.806 9730 INFO nova.osapi_compute.wsgi.server [req-08ef1fd2-8556-4aab-b6aa-f6682be35d2b None] 192.168.40.2 "GET /v2/71b4bb8b4e004c94ba41de53fd54b0a5/images/960ed740-139f-46ed-9854-c3053c24280e HTTP/1.1" status: 200 len: 959 time: 0.0666759
+2016-01-19 07:35:03.688512 mon.0 192.168.40.35:6789/0 1337010 : [INF] pgmap v3189182: 18624 pgs: 18624 active+clean; 25019 MB data, 112 GB used, 18489 GB / 18602 GB avail; 8627 B/s wr, 2 op/s
+2016-01-19 07:35:05.690196 mon.0 192.168.40.35:6789/0 1337011 : [INF] pgmap v3189183: 18624 pgs: 18624 active+clean; 25019 MB data, 112 GB used, 18489 GB / 18602 GB avail; 8641 B/s wr, 2 op/s
+2016-01-19 07:35:06.691349 mon.0 192.168.40.35:6789/0 1337012 : [INF] pgmap v3189184: 18624 pgs: 18624 active+clean; 25019 MB data, 112 GB used, 18489 GB / 18602 GB avail
+2016-01-19 07:35:01.222654 osd.27 192.168.40.13:6800/7836 16366 : [INF] 5.2b2 scrub ok
+2016-01-19 07:35:08.224103 osd.27 192.168.40.13:6800/7836 16367 : [INF] 5.327 scrub ok
+2016-01-19 07:35:09.698866 mon.0 192.168.40.35:6789/0 1337013 : [INF] pgmap v3189185: 18624 pgs: 18624 active+clean; 25019 MB data, 112 GB used, 18489 GB / 18602 GB avail; 3066 B/s wr, 0 op/s
+2016-01-19 07:35:10.705628 mon.0 192.168.40.35:6789/0 1337014 : [INF] pgmap v3189186: 18624 pgs: 18624 active+clean; 25019 MB data, 112 GB used, 18489 GB / 18602 GB avail; 3063 B/s wr, 0 op/s
+2016-01-19 07:35:05.410222 osd.2 192.168.40.27:6800/16156 28898 : [INF] 3.1ec scrub ok
+2016-01-19 07:35:12.708372 mon.0 192.168.40.35:6789/0 1337015 : [INF] pgmap v3189187: 18624 pgs: 18624 active+clean; 25019 MB data, 112 GB used, 18489 GB / 18602 GB avail; 4084 B/s wr, 1 op/s
+2016-01-19 07:35:13.712322 mon.0 192.168.40.35:6789/0 1337016 : [INF] pgmap v3189188: 18624 pgs: 18624 active+clean; 25019 MB data, 112 GB used, 18489 GB / 18602 GB avail; 5440 B/s wr, 1 op/s

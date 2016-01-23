@@ -1,0 +1,4 @@
+.vagrant/
+.sincedb/
+*.deb
+
