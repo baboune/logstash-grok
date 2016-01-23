@@ -42,10 +42,12 @@ But syslog can also send more advanced time like when using:
 
 This can be changed in Ubuntu at /etc/rsyslog.conf.
 ```
-# Comment out the next line
+# Comment out to disable traditional syslog formatting
 #$ActionFileDefaultTemplate RSYSLOG_TraditionalFileFormat
+
 # Adding a ForwardFormat for all logs
 $ActionFileDefaultTemplate RSYSLOG_ForwardFormat
+...
 ```
 
 In order to handle these more complete timestamps, a better pattern is needed. Ideally one that can handle either formats.
