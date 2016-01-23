@@ -14,6 +14,9 @@ What it does:
 To run logstash, and test the config vs the logs:
 ```
 $ vagrant ssh
+```
+Then within the vagrant VM:
+```
 $ cd /opt/logstash/bin
 $ ./logstash agent -f /vagrant/config --verbose
 ```
@@ -39,11 +42,22 @@ But syslog can also send more advanced time like when using:
 
 This can be changed in Ubuntu at /etc/rsyslog.conf.
 ```
+# Comment out the next line
 #$ActionFileDefaultTemplate RSYSLOG_TraditionalFileFormat
+# Adding a ForwardFormat for all logs
 $ActionFileDefaultTemplate RSYSLOG_ForwardFormat
 ```
 
 In order to handle these more complete timestamps, a better pattern is needed. Ideally one that can handle either formats.
+```
+(\<%{POSINT:prio}\>)?(?:%{TIMESTAMP_ISO8601:syslog_timestamp}|%{SYSLOGTIMESTAMP:syslog_timestamp}) %{SYSLOGHOST:syslog_hostname} %{DATA:syslog_program}(:)?(\[%{POSINT:syslog_pid}\])? %{GREEDYDATA:syslog_message}
+```
+The pattern above can handle all the below:
+  <8>2013-04-06T13:26:48.622862+01:00 node-1 rsyslogd-2027: Using prio, T and long time
+  Mar 12 12:27:00 node-2 named[32172]: no prio, short standard syslog
+  2016-01-21T14:02:11.472593+00:00 node-3 rsyslogd: no prio, T and long time
+  <123>Jan 11 13:17:01 node-4 CRON[13599]: prio, short standard syslog
+
 
 # Ceilometer
 
